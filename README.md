@@ -2,6 +2,14 @@
 ### Are Foundation Models All You Need for Zero-shot Face Presentation Attack Detection?
 ### Paper accepted at [Face & Gesture 2025]([https://www.vislab.ucr.edu/Biometrics2024/index.php](https://fg2025.ieee-biometrics.org/))
 
+## Zero-shot Pipeline ##
+
+![Zero-shot Pipeline](/img/pipeline.png)  
+*Fig 1: Overview of the foundation model-based framework for zero-shot PAD.*
+
+## Overview
+To protect facial recognition schemes against presentation attacks, state-of-the-art deep learning presentation attack detection (PAD) approaches require a large amount of data to produce reliable detection performances and even then, they decrease their performance for unknown presentation attack instruments (PAI) or database (information not seen during training), i.e. they lack generalisability. This paper focuses on zero-shot PAD. To do so, we first assess the effectiveness and generalisability of foundation models in established and challenging experimental scenarios and then propose a simple but effective framework for zero-shot PAD. Experimental results show that these models are able to achieve performance in difficult scenarios with minimal effort of the more advanced PAD mechanisms, whose weights were optimised mainly with training sets that included APs and bona fide presentations. The top-performing foundation model outperforms by a margin the best from the state of the art observed with the leaving-one-out protocol on the SiW-Mv2 database, which contains challenging unknown 2D and 3D attacks.
+
 ## Requierements ##
 - Python 3.8+
 - pytorch-lightning==2.1.0
