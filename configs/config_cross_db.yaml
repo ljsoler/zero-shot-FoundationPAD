@@ -1,0 +1,49 @@
+dataset:
+  LR: 0.0001
+  batch_size: 128
+  checkpoint: None
+  img_size: 224
+  name: AGGREGATEDB
+  normalize:
+    mean:
+    - 0.48145466
+    - 0.4578275
+    - 0.40821073
+    std:
+    - 0.26862954
+    - 0.26130258
+    - 0.27577711
+  num_workers: 3
+  test_params:
+    databases:
+    - OULU-NPU
+    num_frames: 25
+    root: <root path to the database>
+  train_params:
+    databases:
+    - CASIA_FASD
+    - MSU-FASD
+    - RA
+    num_frames: 25
+    root: <root path to the database>
+  val_params:
+    databases:
+    - OULU-NPU
+    num_frames: 25
+    root: <root path to the database>
+logging_params:
+  manual_seed: 1265
+  name: CLIP_ViT-B-16
+  run_dir: logs/
+  version: OULU-NPU
+model_params:
+  head_only: true
+  hub: facebookresearch/dinov2
+  learning_rate: 0.0001
+  model_name: CLIP_ViT-B-16
+  num_classes: 1
+trainer_params:
+  accelerator: gpu
+  check_val_every_n_epoch: 8
+  devices: auto
+  max_epochs: 50
